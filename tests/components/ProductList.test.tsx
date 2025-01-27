@@ -4,9 +4,9 @@ import {
   waitForElementToBeRemoved,
 } from "@testing-library/react";
 import { delay, http, HttpResponse } from "msw";
-import ProductList from "../src/components/ProductList";
-import { db } from "./mocks/db";
-import { server } from "./mocks/server";
+import ProductList from "../../src/components/ProductList";
+import { db } from "../mocks/db";
+import { server } from "../mocks/server";
 
 describe("ProductList", () => {
   const productIds: number[] = [];
