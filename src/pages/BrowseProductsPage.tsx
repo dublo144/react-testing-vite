@@ -48,7 +48,7 @@ function BrowseProducts() {
   }, []);
 
   if (errorProducts)
-    return <div aria-label="categories error">Error: {errorProducts}</div>;
+    return <div aria-label="products error">Error: {errorProducts}</div>;
 
   const renderCategories = () => {
     if (isCategoriesLoading)
@@ -57,7 +57,7 @@ function BrowseProducts() {
           <Skeleton />
         </div>
       );
-    if (errorCategories) return <div>Error: {errorCategories}</div>;
+    if (errorCategories) return null;
     return (
       <Select.Root
         onValueChange={(categoryId) =>
